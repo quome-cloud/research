@@ -477,6 +477,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "A sealed goal anchor, hash-chained provenance ledger and goal-drift monitor for self-improving clinical agents",
+          "headline": "Attack success rate (M2): 0.94-1.00 on every model of 3.8B or more; llama3.2 3B 0.40 [0.30, 0.51]; gpt-oss 120B 0.81 [0.71, 0.88]",
           "impact": "A sealed goal anchor, hash-chained provenance ledger and goal-drift monitor for self-improving clinical agents. Headline: Attack success rate (M2) — 0.94-1.00 on every model of 3.8B or more; llama3.2 3B 0.40 [0.30, 0.51]; gpt-oss 120B 0.81 [0.71, 0.88].",
           "venue": "Preprint",
           "year": 2026,
@@ -487,6 +489,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/intentbench",
           "dataset_label": "IntentBench",
           "haarf": "C1",
+          "path": "request+response",
           "module": "quanchor",
           "badge": "module",
           "author_affiliations": {
@@ -501,6 +504,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "A blake3-chained, ed25519-signed, externally anchored audit ledger for clinical AI agents",
+          "headline": "Tamper detection rate (E1): 100% (26/26 tampered logs)",
           "impact": "A blake3-chained, ed25519-signed, externally anchored audit ledger for clinical AI agents. Headline: Tamper detection rate (E1) — 100% (26/26 tampered logs).",
           "venue": "Preprint",
           "year": 2026,
@@ -511,6 +516,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/tamperbench",
           "dataset_label": "TamperBench",
           "haarf": "C2",
+          "path": "all",
           "module": "quledger",
           "badge": "module",
           "author_affiliations": {
@@ -525,6 +531,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "A signed CycloneDX AI bill of materials and fail-closed admission gate for clinical AI agents",
+          "headline": "Supply-chain detection coverage (E1): 100% (15/15)",
           "impact": "A signed CycloneDX AI bill of materials and fail-closed admission gate for clinical AI agents. Headline: Supply-chain detection coverage (E1) — 100% (15/15).",
           "venue": "Preprint",
           "year": 2026,
@@ -535,6 +543,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/supplychainbench",
           "dataset_label": "SupplyChainBench",
           "haarf": "C3",
+          "path": "admission",
           "module": "qubom",
           "badge": "module",
           "author_affiliations": {
@@ -549,6 +558,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "Context-aware, auditable policy-as-code authorization for clinical AI agents, with Cedar and Rego behind one trait",
+          "headline": "Over-permission rate (OPR): 42.9% static RBAC vs 0% Cedar/Rego",
           "impact": "Context-aware, auditable policy-as-code authorization for clinical AI agents, with Cedar and Rego behind one trait. Headline: Over-permission rate (OPR) — 42.9% static RBAC vs 0% Cedar/Rego.",
           "venue": "Preprint",
           "year": 2026,
@@ -559,6 +570,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/policybench",
           "dataset_label": "PolicyBench",
           "haarf": "C8",
+          "path": "request",
           "module": "quwarden",
           "badge": "module",
           "author_affiliations": {
@@ -573,6 +585,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "Provenance taint-tracking that stops encoded, split, and trickled PHI exfiltration where content DLP sees nothing",
+          "headline": "Encoded exfil prevented (X2): taint 60/60 vs regex 0/60 vs LLM-NER (llama3.1:8b) 0/60",
           "impact": "Provenance taint-tracking that stops encoded, split, and trickled PHI exfiltration where content DLP sees nothing. Headline: Encoded exfil prevented (X2) — taint 60/60 vs regex 0/60 vs LLM-NER (llama3.1:8b) 0/60.",
           "venue": "Preprint",
           "year": 2026,
@@ -583,6 +597,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/exfilbench",
           "dataset_label": "ExfilBench",
           "haarf": "C3.6",
+          "path": "response",
           "module": "qudam",
           "badge": "module",
           "author_affiliations": {
@@ -597,6 +612,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "Provenance-scored, poison-aware retrieval and a fail-closed memory-write policy over a TurboQuant vector index",
+          "headline": "Poison attack success (PAS), targeted queries: 100% undefended to 0% with the full stack (provenance-only 9.1%)",
           "impact": "Provenance-scored, poison-aware retrieval and a fail-closed memory-write policy over a TurboQuant vector index. Headline: Poison attack success (PAS), targeted queries — 100% undefended to 0% with the full stack (provenance-only 9.1%).",
           "venue": "Preprint",
           "year": 2026,
@@ -607,6 +624,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/poisonbench",
           "dataset_label": "PoisonBench",
           "haarf": "C3.2",
+          "path": "request",
           "module": "quantidote",
           "badge": "module",
           "author_affiliations": {
@@ -621,6 +639,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "Signed agent registry, attenuable biscuit capability tokens, and k-of-n quorum for clinical agent fleets",
+          "headline": "Attack success with no identity layer: 100% (90/90), 95% Wilson CI [95.9%, 100%]",
           "impact": "Signed agent registry, attenuable biscuit capability tokens, and k-of-n quorum for clinical agent fleets. Headline: Attack success with no identity layer — 100% (90/90), 95% Wilson CI [95.9%, 100%].",
           "venue": "Preprint",
           "year": 2026,
@@ -631,6 +651,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/mabench",
           "dataset_label": "MABench",
           "haarf": "C5",
+          "path": "admission",
           "module": "quorum",
           "badge": "module",
           "author_affiliations": {
@@ -645,6 +666,8 @@
           "authors": [
             "James Schwoebel"
           ],
+          "tagline": "Risk-calibrated escalation routing that sends only genuinely ambiguous agent actions to clinicians",
+          "headline": "Policy-control false-block rate on legitimate actions (E1): 28.3%",
           "impact": "Risk-calibrated escalation routing that sends only genuinely ambiguous agent actions to clinicians. Headline: Policy-control false-block rate on legitimate actions (E1) — 28.3%.",
           "venue": "Preprint",
           "year": 2026,
@@ -655,6 +678,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/triagebench",
           "dataset_label": "TriageBench",
           "haarf": "C4",
+          "path": "escalate",
           "module": "qutriage",
           "badge": "module",
           "author_affiliations": {
@@ -670,6 +694,8 @@
             "Jim Schwoebel",
             "QUOKKAGUARD Contributors"
           ],
+          "tagline": "An out-of-band subgroup fairness monitor that audits the guardrail's own deny and escalate decisions",
+          "headline": "Live gateway race enforcement gap, max pairwise (E1): 13.6% (0 of 5 axes significant at audit N; overall enforcement 12.0%)",
           "impact": "An out-of-band subgroup fairness monitor that audits the guardrail's own deny and escalate decisions. Headline: Live gateway race enforcement gap, max pairwise (E1) — 13.6% (0 of 5 axes significant at audit N; overall enforcement 12.0%).",
           "venue": "Preprint",
           "year": 2026,
@@ -680,6 +706,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/equitybench",
           "dataset_label": "EquityBench",
           "haarf": "C7",
+          "path": "monitor",
           "module": "qufair",
           "badge": "module",
           "author_affiliations": {
@@ -698,6 +725,8 @@
             "Jim Schwoebel",
             "QUOKKAGUARD Contributors"
           ],
+          "tagline": "Off-hot-path drift, autonomy-creep, and behavioral-anomaly monitoring over the signed decision stream",
+          "headline": "Drift detection rate and ROC AUC per detector (E1): CUSUM 54/54, AUC 1.00; conformal 54/54, AUC 1.00; distance 54/54, AUC 1.00; ADWIN 36/54, AUC 0.83",
           "impact": "Off-hot-path drift, autonomy-creep, and behavioral-anomaly monitoring over the signed decision stream. Headline: Drift detection rate and ROC AUC per detector (E1) — CUSUM 54/54, AUC 1.00; conformal 54/54, AUC 1.00; distance 54/54, AUC 1.00; ADWIN 36/54, AUC 0.83.",
           "venue": "Preprint",
           "year": 2026,
@@ -708,6 +737,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/haarf-drift",
           "dataset_label": "HAARF-Drift",
           "haarf": "C1.4/C1.5",
+          "path": "monitor",
           "module": "qudrift",
           "badge": "module",
           "author_affiliations": {
@@ -725,6 +755,8 @@
           "authors": [
             "QUOKKAGUARD Project"
           ],
+          "tagline": "A signed, four-jurisdiction regulatory passport that fail-closes agent deployment on any out-of-PCCP change",
+          "headline": "Classification accuracy (CLA): 0.992 (95% CI [0.981, 0.996])",
           "impact": "A signed, four-jurisdiction regulatory passport that fail-closes agent deployment on any out-of-PCCP change. Headline: Classification accuracy (CLA) — 0.992 (95% CI [0.981, 0.996]).",
           "venue": "Preprint",
           "year": 2026,
@@ -735,6 +767,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/passportbench",
           "dataset_label": "PassportBench",
           "haarf": "C1/C6",
+          "path": "admission",
           "module": "qupassport",
           "badge": "module",
           "author_affiliations": {
@@ -747,6 +780,8 @@
           "authors": [
             "QUOKKAGUARD Working Group"
           ],
+          "tagline": "A FHIR-consent scope gate, AI-disclosure stamper, and signed competency gate for clinical AI agents",
+          "headline": "Spontaneous AI-involvement disclosure (live llama3.1:8b, n=120): 0.0% un-gated -> 100.0% gated",
           "impact": "A FHIR-consent scope gate, AI-disclosure stamper, and signed competency gate for clinical AI agents. Headline: Spontaneous AI-involvement disclosure (live llama3.1:8b, n=120) — 0.0% un-gated -> 100.0% gated.",
           "venue": "Preprint",
           "year": 2026,
@@ -757,6 +792,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/consentbench",
           "dataset_label": "ConsentBench",
           "haarf": "C4",
+          "path": "response/admission",
           "module": "quconsent",
           "badge": "module",
           "author_affiliations": {
@@ -770,6 +806,8 @@
             "Jim Schwoebel",
             "QUOKKAGUARD Contributors"
           ],
+          "tagline": "A fail-closed safety broker for AI agents that actuate ventilators, infusion pumps, and monitors",
+          "headline": "Unsafe-actuation rate (live llama3.1:8b, n=216): 53.7% broker-off -> 0.0% broker-on (95% CI upper bound 1.7%)",
           "impact": "A fail-closed safety broker for AI agents that actuate ventilators, infusion pumps, and monitors. Headline: Unsafe-actuation rate (live llama3.1:8b, n=216) — 53.7% broker-off -> 0.0% broker-on (95% CI upper bound 1.7%).",
           "venue": "Preprint",
           "year": 2026,
@@ -780,6 +818,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/devicebench",
           "dataset_label": "DeviceBench",
           "haarf": "C8.3/8.6/3.1",
+          "path": "request",
           "module": "qubroker",
           "badge": "module",
           "author_affiliations": {
@@ -798,6 +837,8 @@
             "Jim Schwoebel",
             "QUOKKAGUARD Contributors"
           ],
+          "tagline": "Continuous red-team replay, regression gating, incident runbooks, and chaos testing for clinical AI guardrails",
+          "headline": "Distinct vulnerabilities discovered (E1): 62 continuous vs 12 one-shot (50 more)",
           "impact": "Continuous red-team replay, regression gating, incident runbooks, and chaos testing for clinical AI guardrails. Headline: Distinct vulnerabilities discovered (E1) — 62 continuous vs 12 one-shot (50 more).",
           "venue": "Preprint",
           "year": 2026,
@@ -808,6 +849,7 @@
           "dataset_url": "https://huggingface.co/datasets/Quome/haarf-redteam",
           "dataset_label": "HAARF-RedTeam",
           "haarf": "C3.1/3.7/3.8",
+          "path": "monitor",
           "module": "qusiege",
           "badge": "module",
           "author_affiliations": {
