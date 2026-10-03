@@ -93,19 +93,19 @@ Verified code world models built by acting, a source-free audited protocol, the 
 *A regulatory framework, a positive-security prompt firewall, and fourteen enforcement modules, each a standalone paper with code and an adversarial dataset, that together make autonomous clinical agents verifiable.*
 
 ```mermaid
-flowchart LR
+flowchart TB
     C(["Agent / client"]) --> G
     G --> M(["Model endpoint<br/>(OpenAI-compatible)"])
-    subgraph G["<b>qfire</b> — the QUOKKAGUARD gateway"]
-      direction LR
+    subgraph G["<b>qfire</b> — the QUOKKAGUARD gateway (one Rust binary)"]
+      direction TB
       subgraph ADM["Admission (once per agent)"]
-        direction TB
+        direction LR
         qubom["<b>qubom</b><br/>AIBOM attestation gate<br/><sub>HAARF C3</sub>"]
         quorum["<b>quorum</b><br/>agent identity + k-of-n quorum<br/><sub>HAARF C5</sub>"]
         qupassport["<b>qupassport</b><br/>regulatory passport gate<br/><sub>HAARF C1/C6</sub>"]
       end
       subgraph REQ["Request path"]
-        direction TB
+        direction LR
         QF["<b>QFIRE</b><br/>positive-security prompt firewall<br/><sub>rules · chains</sub>"]
         quanchor["<b>quanchor</b><br/>sealed goal anchor + goal-drift monitor<br/><sub>HAARF C1</sub>"]
         quwarden["<b>quwarden</b><br/>policy-as-code authorization<br/><sub>HAARF C8</sub>"]
@@ -113,13 +113,13 @@ flowchart LR
         qubroker["<b>qubroker</b><br/>device-safety broker<br/><sub>HAARF C8.3/8.6/3.1</sub>"]
       end
       subgraph RESP["Response path"]
-        direction TB
+        direction LR
         qudam["<b>qudam</b><br/>PHI egress control / DLP<br/><sub>HAARF C3.6</sub>"]
         quconsent["<b>quconsent</b><br/>consent + AI disclosure<br/><sub>HAARF C4</sub>"]
       end
       ADM --> REQ --> RESP
       subgraph ESC["Escalation"]
-        direction TB
+        direction LR
         qutriage["<b>qutriage</b><br/>calibrated human oversight<br/><sub>HAARF C4</sub>"]
       end
       REQ -. ambiguous .-> ESC
