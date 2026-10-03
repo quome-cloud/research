@@ -99,13 +99,13 @@ flowchart TB
     subgraph G["<b>qfire</b> — the QUOKKAGUARD gateway (one Rust binary)"]
       direction TB
       subgraph ADM["Admission (once per agent)"]
-        direction LR
+        direction TB
         qubom["<b>qubom</b><br/>AIBOM attestation gate<br/><sub>HAARF C3</sub>"]
         quorum["<b>quorum</b><br/>agent identity + k-of-n quorum<br/><sub>HAARF C5</sub>"]
         qupassport["<b>qupassport</b><br/>regulatory passport gate<br/><sub>HAARF C1/C6</sub>"]
       end
       subgraph REQ["Request path"]
-        direction LR
+        direction TB
         QF["<b>QFIRE</b><br/>positive-security prompt firewall<br/><sub>rules · chains</sub>"]
         quanchor["<b>quanchor</b><br/>sealed goal anchor + goal-drift monitor<br/><sub>HAARF C1</sub>"]
         quwarden["<b>quwarden</b><br/>policy-as-code authorization<br/><sub>HAARF C8</sub>"]
@@ -113,18 +113,18 @@ flowchart TB
         qubroker["<b>qubroker</b><br/>device-safety broker<br/><sub>HAARF C8.3/8.6/3.1</sub>"]
       end
       subgraph RESP["Response path"]
-        direction LR
+        direction TB
         qudam["<b>qudam</b><br/>PHI egress control / DLP<br/><sub>HAARF C3.6</sub>"]
         quconsent["<b>quconsent</b><br/>consent + AI disclosure<br/><sub>HAARF C4</sub>"]
       end
       ADM --> REQ --> RESP
       subgraph ESC["Escalation"]
-        direction LR
+        direction TB
         qutriage["<b>qutriage</b><br/>calibrated human oversight<br/><sub>HAARF C4</sub>"]
       end
       REQ -. ambiguous .-> ESC
       subgraph MON["Out-of-band monitors (signed decision stream)"]
-        direction LR
+        direction TB
         quledger["<b>quledger</b><br/>tamper-evident audit ledger<br/><sub>HAARF C2</sub>"]
         qufair["<b>qufair</b><br/>equity monitor<br/><sub>HAARF C7</sub>"]
         qudrift["<b>qudrift</b><br/>drift & autonomy monitor<br/><sub>HAARF C1.4/C1.5</sub>"]
