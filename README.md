@@ -2,31 +2,31 @@
 
 <img src="assets/quome-research-banner.svg" alt="Quome Research — verifiable AI for the places where it has to be right" width="100%">
 
-### Research you can run. Every paper ships with its code, its data, and its numbers.
+### Research partnerships for AI that has to be right. Every paper ships with its code, its data, and its numbers.
 
-![papers](https://img.shields.io/badge/papers-22-7c3aed) ![open source repos](https://img.shields.io/badge/open--source_repos-18-2563eb) ![datasets](https://img.shields.io/badge/datasets-14-FFD21E) ![authors](https://img.shields.io/badge/co--authors-21-0ea5e9) ![institutions](https://img.shields.io/badge/institutions-16-10b981) ![license](https://img.shields.io/badge/license-Apache_2.0-3FB950)
+![papers](https://img.shields.io/badge/papers-28-7c3aed) ![open source repos](https://img.shields.io/badge/open--source_repos-24-2563eb) ![datasets](https://img.shields.io/badge/datasets-14-FFD21E) ![authors](https://img.shields.io/badge/co--authors-21-0ea5e9) ![institutions](https://img.shields.io/badge/institutions-16-10b981) ![license](https://img.shields.io/badge/license-Apache_2.0-3FB950)
 
-**[🌐 Website](https://quome-cloud.github.io/research/)** · [World models](#-world-models) · [Healthcare AI security](#-healthcare-ai-security) · [Proof of control](#-proof-of-control--verification) · [Agentic systems](#-agentic-systems--evaluation) · [Release calendar](#-release-calendar) · [Collaborators](#-collaborators) · [Cite](#-cite)
+**[🌐 Website](https://quome-cloud.github.io/research/)** · [Healthcare AI security](#-healthcare-ai-security) · [Proof of control](#-proof-of-control--verification) · [World models](#-world-models) · [Agentic systems](#-agentic-systems--evaluation) · [Partner with us](#-partner-with-us) · [Collaborators](#-collaborators) · [Cite](#-cite)
 
 </div>
 
 ---
 
-**Quome builds AI for regulated, high-stakes environments, and we publish the evidence.** One question, asked in three settings: *how do you know an autonomous system did what it was supposed to?* For clinical agents the answer is a security gateway you can audit. For world models it is code you can verify instead of video you can only watch. For AI governance it is proof of control anyone can check without trusting the operator.
+**Quome Research works with health systems, standards bodies and regulated enterprises on one question: *how do you know an autonomous system did what it was supposed to?*** Each problem domain below starts from a question a partner has to answer in production. For clinical agents the answer is a security gateway you can audit. For AI governance it is proof of control anyone can check without trusting the operator. For world models it is code you can verify instead of video you can only watch. Every answer ships as a paper, a repository and a dataset that anyone can run.
 
 ```mermaid
 flowchart LR
-    Q(["<b>Quome Research</b><br/>22 papers · 18 repos · 14 datasets"])
-    Q --> W["🌍 <b>World models</b><br/>verified code worlds<br/>3 papers · openworld"]
-    Q --> H["🩺 <b>Healthcare AI security</b><br/>HAARF · QFIRE · 14 modules<br/>16 papers · 14 datasets"]
-    Q --> P["🔏 <b>Proof of control</b><br/>trust calculus · open standard<br/>2 papers · 2 repos"]
-    Q --> A["🤖 <b>Agentic systems</b><br/>human-centered benchmarks<br/>1 paper"]
-    W --> W1[exactness without<br/>compounding error]
-    W --> W2[world-time compute:<br/>train on many verified worlds]
+    Q(["<b>Quome Research</b><br/>28 papers · 24 repos · 14 datasets"])
+    Q --> H["🩺 <b>Healthcare AI security</b><br/>How do you let an agent near patient care?<br/>16 papers · 14 datasets"]
+    Q --> P["🔏 <b>Proof of control</b><br/>How do you prove what an AI did?<br/>8 papers · 8 repos"]
+    Q --> W["🌍 <b>World models</b><br/>How do you train in simulators that stay exact?<br/>3 papers · openworld"]
+    Q --> A["🤖 <b>Agentic evaluation</b><br/>What does agentic software deliver to users?<br/>1 paper"]
     H --> H1[one Rust gateway<br/>ALLOW · BLOCK · ESCALATE]
     H --> H2[every layer = paper +<br/>code + adversarial dataset]
     P --> P1[residual trust set<br/>for any deployment]
     P --> P2[127 verifiable requirements<br/>graded on tiers]
+    W --> W1[exactness without<br/>compounding error]
+    W --> W2[world-time compute:<br/>train on many verified worlds]
     classDef pillar fill:#1e1b4b,stroke:#7c3aed,color:#fff,stroke-width:2px;
     classDef leaf fill:#eef2ff,stroke:#a5b4fc,color:#1e1b4b;
     class W,H,P,A pillar; class W1,W2,H1,H2,P1,P2 leaf;
@@ -41,54 +41,13 @@ flowchart LR
 | **[Task Force for AI Agents in Healthcare](https://aihealthagents.org/)** | Clinicians, security engineers and regulators defining how autonomous agents are verified before they touch patient care. Home of HAARF. |
 | **[Advanced AI Society](https://advancedaisociety.org/)** | Steward of the Proof-of-Control Initiative: open standards for verifying what AI agents actually did, in a form anyone can check. |
 
-<sub>**16 institutions across 22 papers** (superscripts below): <sup>1</sup> [Quome, Inc.](https://quome.com) · <sup>2</sup> Fusen World LLC · <sup>3</sup> Independent · <sup>4</sup> [OWASP](https://owasp.org/) · <sup>5</sup> [IEEE Computer Society](https://www.computer.org/) · <sup>6</sup> Rafter Labs, Inc. · <sup>7</sup> [University of Washington](https://www.washington.edu/) · <sup>8</sup> Health Stream Analytics, LLC · <sup>9</sup> [Task Force for AI Agents in Healthcare](https://aihealthagents.org/) · <sup>10</sup> [Institute on Human Development and Disability, University of Washington](https://ihdd.uw.edu/) · <sup>11</sup> TammNet · <sup>12</sup> Velocity AI · <sup>13</sup> [Health-ISAC](https://health-isac.org/) · <sup>14</sup> Move37 Labs · <sup>15</sup> [Advanced AI Society](https://advancedaisociety.org/) · <sup>16</sup> [Cloud Security Alliance](https://cloudsecurityalliance.org/)</sub>
-
----
-
-## 🌍 World models
-
-*Verified code world models: simulators an agent can author in minutes, that stay exact, and that teach models to generalize.*
-
-```mermaid
-flowchart LR
-    A["<b>Author</b><br/>an agent writes a world<br/>as code (minutes)"] --> V["<b>Verify</b><br/>tests pass ⇒ exact,<br/>no compounding error"] --> S["<b>Serve</b><br/>Gymnasium adapter,<br/>portable spec + model card"]
-    S --> R["<b>Roll out</b><br/>trajectories from<br/>many verified worlds"] --> F["<b>World-time compute</b><br/>fine-tune on them"] --> G["<b>Generalize</b><br/>to held-out worlds,<br/>incl. human-authored domains"]
-    S --> ARC["<b>ARC-AGI-3</b><br/>perceptual code world models<br/>built by acting"]
-    classDef s fill:#ecfeff,stroke:#0ea5e9,color:#0c4a6e;
-    classDef r fill:#eef2ff,stroke:#6366f1,color:#1e1b4b;
-    class A,V,S s; class R,F,G,ARC r;
-```
-
-<p align="center"><a href="https://github.com/quome-cloud/openworld"><img src="https://raw.githubusercontent.com/quome-cloud/openworld/main/assets/why-verified.png" width="860" alt="Verified code world models stay exact while learned simulators drift"></a><br/><sub>From the OpenWorld papers: verified code stays exact (accuracy 1.0) where learned simulators compound error. <a href="https://github.com/quome-cloud/openworld">openworld</a> is the open-source substrate.</sub></p>
-
-
-### World-Time Compute with Verified Code World Models
-
-Verified code world models have no compounding error, and fine-tuning on trajectories from many verified worlds lifts generalization to held-out worlds, including a real human-authored domain.
-
-<sub>James Schwoebel<sup>1</sup>, Ingrida Semenec<sup>1</sup>, Jenia Rousseva<sup>1</sup>, Marcos Ortiz<sup>1</sup>, Collin Overbay<sup>1</sup>, Christopher Klaus<sup>2</sup>, Anderson Edmond<sup>3</sup>, Manish Bhatt<sup>4,5</sup>, Rome Thorstenson<sup>6</sup>, Jessica Tsai<sup>1</sup>, Martin G. Frasch<sup>7,8</sup> · *arXiv preprint arXiv:2609.09163, 2026*</sub>
-
-[📄 Paper](https://arxiv.org/abs/2609.09163) · [PDF](https://arxiv.org/pdf/2609.09163) · [💻 `openworld`](https://github.com/quome-cloud/openworld) · [Cite](#cite-schwoebel2026worldtime)
-
-### World Computing: Prototyping and Evaluating Verified Code World Models
-
-The OpenWorld substrate: an agent authors a structurally-validated, servable world in minutes; a formal composition algebra, portable specs and model cards, and a six-sector benchmark run on local 7B–9B models with no training.
-
-<sub>James Schwoebel<sup>1</sup>, Ingrida Semenec<sup>1</sup>, Jenia Rousseva<sup>1</sup>, Marcos Ortiz<sup>1</sup>, Collin Overbay<sup>1</sup>, Christopher Klaus<sup>2</sup>, Anderson Edmond<sup>3</sup>, Manish Bhatt<sup>4,5</sup>, Rome Thorstenson<sup>6</sup>, Jessica Tsai<sup>1</sup>, Martin G. Frasch<sup>7,8</sup> · *Preprint, 2026*</sub>
-
-[📄 Paper](https://github.com/quome-cloud/openworld/blob/main/papers/framework/main.pdf) · [PDF](https://github.com/quome-cloud/openworld/raw/main/papers/framework/main.pdf) · [💻 `openworld`](https://github.com/quome-cloud/openworld) · [Cite](#cite-schwoebel2026worldcomputing)
-
-### Solving ARC-AGI-3 with Perceptual Code World Models
-
-Verified code world models built by acting, a source-free audited protocol, the goal-as-procedure diagnosis, and an atlas of serveable per-game world models for ARC-AGI-3.
-
-<sub>James Schwoebel<sup>1</sup>, Ingrida Semenec<sup>1</sup>, Jenia Rousseva<sup>1</sup>, Marcos Ortiz<sup>1</sup>, Collin Overbay<sup>1</sup>, Christopher Klaus<sup>2</sup>, Manish Bhatt<sup>4,5</sup>, Rome Thorstenson<sup>6</sup>, Jessica Tsai<sup>1</sup>, Martin G. Frasch<sup>7,8</sup> · *Technical report, 2026*</sub>
-
-[📄 Paper](https://github.com/quome-cloud/openworld/blob/main/papers/arc-3/main.pdf) · [PDF](https://github.com/quome-cloud/openworld/raw/main/papers/arc-3/main.pdf) · [💻 `openworld`](https://github.com/quome-cloud/openworld) · [Cite](#cite-schwoebel2026arcagi3)
+<sub>**16 institutions across 28 papers** (superscripts below): <sup>1</sup> [Quome, Inc.](https://quome.com) · <sup>2</sup> Fusen World LLC · <sup>3</sup> Independent · <sup>4</sup> [OWASP](https://owasp.org/) · <sup>5</sup> [IEEE Computer Society](https://www.computer.org/) · <sup>6</sup> Rafter Labs, Inc. · <sup>7</sup> [University of Washington](https://www.washington.edu/) · <sup>8</sup> Health Stream Analytics, LLC · <sup>9</sup> [Task Force for AI Agents in Healthcare](https://aihealthagents.org/) · <sup>10</sup> [Institute on Human Development and Disability, University of Washington](https://ihdd.uw.edu/) · <sup>11</sup> TammNet · <sup>12</sup> Velocity AI · <sup>13</sup> [Health-ISAC](https://health-isac.org/) · <sup>14</sup> Move37 Labs · <sup>15</sup> [Advanced AI Society](https://advancedaisociety.org/) · <sup>16</sup> [Cloud Security Alliance](https://cloudsecurityalliance.org/)</sub>
 
 ---
 
 ## 🩺 Healthcare AI security
+
+**Domain 01 · How do you let an autonomous agent anywhere near patient care?** With the [Task Force for AI Agents in Healthcare](https://aihealthagents.org/). For health systems, device makers and regulators.
 
 *A regulatory framework, a positive-security prompt firewall, and fourteen enforcement modules, each a standalone paper with code and an adversarial dataset, that together make autonomous clinical agents verifiable.*
 
@@ -185,7 +144,9 @@ QFIRE: a Rust prompt firewall (proxy, CLI, 100+ rules, benchmark harness) that e
 
 ## 🔏 Proof of control & verification
 
-*Replacing "trust me" with evidence anyone can check: a calculus for what attestation really buys you, and an open standard for proving what an agent did.*
+**Domain 02 · How do you prove what an AI system did without trusting its operator?** With the [Advanced AI Society](https://advancedaisociety.org/). For procurement, auditors and AI governance teams.
+
+*Replacing "trust me" with evidence anyone can check: an open standard of 127 verifiable requirements, a twelve-paper research roadmap with working software behind the first three, and a practitioner guide for the teams that have to deploy it. All code at [github.com/AAI-Society](https://github.com/AAI-Society).*
 
 ```mermaid
 flowchart LR
@@ -220,9 +181,106 @@ The Proof-of-Control Standard: 127 verifiable requirements across six domains, g
 
 <p align="center"><a href="https://github.com/LFDT-ProofOfControl/ov-poc-standard"><img src="https://raw.githubusercontent.com/LFDT-ProofOfControl/ov-poc-standard/master/images/diagrams/tier-ladder-light.svg" width="760" alt="Proof-of-Control verifiability tiers"></a><br/><sub>The Verifiability Tiers from the Proof-of-Control Standard (Advanced AI Society).</sub></p>
 
+### The roadmap, the guide, and the tools that followed
+
+### Proof-of-Control Research Roadmap: Twelve Open Questions in Agent Verification <sub>roadmap</sub>
+
+The foundational strategy paper: twelve scoped research questions, from zero-knowledge identity and state explosion to hardware dependencies and real-time execution boundaries, that the standard currently answers by assertion or not at all. Three are drafted with working software.
+
+<sub>Jim Schwoebel<sup>1,15</sup> · *Advanced AI Society, Proof-of-Control Initiative — working draft v0.1, 2026*</sub>
+
+[📄 Paper](https://github.com/AAI-Society/poc-research-roadmap/blob/master/Proof-of-Control-Research-Roadmap.pdf) · [PDF](https://github.com/AAI-Society/poc-research-roadmap/raw/master/Proof-of-Control-Research-Roadmap.pdf) · [💻 `poc-research-roadmap`](https://github.com/AAI-Society/poc-research-roadmap) · [Cite](#cite-schwoebel2026pocroadmap)
+
+### Proof-of-Control for AI Agents: A Practitioner's Guide <sub>practitioner guide</sub>
+
+An operational blueprint for CISOs, security engineers and governance teams: deployment architecture, acceptance criteria for third-party AI vendors, twelve vendor questions, eight audit tests, and measured costs from a real Intel TDX deployment.
+
+<sub>Jim Schwoebel<sup>1,15</sup> · *Advanced AI Society, Proof-of-Control Initiative — working draft v0.1, 2026*</sub>
+
+[📄 Paper](https://github.com/AAI-Society/poc_guide/blob/master/dist/proof-of-control-guide.pdf) · [PDF](https://github.com/AAI-Society/poc_guide/raw/master/dist/proof-of-control-guide.pdf) · [💻 `poc_guide`](https://github.com/AAI-Society/poc_guide) · [Cite](#cite-schwoebel2026pocguide)
+
+### From Message Authorization to Effect Binding: Conditions, Counterexamples, and a Conformance Harness <sub>open source</sub>
+
+transit: a signed capability binds the bytes of a request, not what the endpoint does with them. Conditions under which signing binds the effect, counterexamples where it does not, and a conformance harness for non-deterministic LLM execution.
+
+<sub>Jim Schwoebel<sup>1,15</sup> · *Advanced AI Society, Proof-of-Control Initiative — working draft v0.1, 2026*</sub>
+
+[📄 Paper](https://github.com/AAI-Society/transit/blob/main/paper/main.pdf) · [PDF](https://github.com/AAI-Society/transit/raw/main/paper/main.pdf) · [💻 `transit`](https://github.com/AAI-Society/transit) · [Cite](#cite-schwoebel2026transit)
+
+### What Unlinkability Costs at Agent Action Rates: A Composed-Path Measurement and the Soundness of Pre-Computation <sub>open source</sub>
+
+occultation: real BBS+ over BLS12-381 against an Ed25519 baseline, measuring what verifiable unlinkability costs at agent action rates, and what breaks when the pre-computation pool runs out. Agents prove authorization without revealing principal identity.
+
+<sub>Jim Schwoebel<sup>1,15</sup> · *Advanced AI Society, Proof-of-Control Initiative — working draft v0.1, 2026*</sub>
+
+[📄 Paper](https://github.com/AAI-Society/occultation/blob/main/paper/main.pdf) · [PDF](https://github.com/AAI-Society/occultation/raw/main/paper/main.pdf) · [💻 `occultation`](https://github.com/AAI-Society/occultation) · [Cite](#cite-schwoebel2026occultation)
+
+### A Digest Is a Change Detector, Not a Claim: Composition Commitments for Agent Systems, and the Attack Class They Cannot See <sub>open source</sub>
+
+spectrum: a composition commitment for agent systems that commits to a declared component set, model weights and context hashes, and reports which runtime behaviors can be verified cryptographically versus those that need statistical attestation.
+
+<sub>Jim Schwoebel<sup>1,15</sup> · *Advanced AI Society, Proof-of-Control Initiative — working draft v0.1, 2026*</sub>
+
+[📄 Paper](https://github.com/AAI-Society/spectrum/blob/main/paper/main.pdf) · [PDF](https://github.com/AAI-Society/spectrum/raw/main/paper/main.pdf) · [💻 `spectrum`](https://github.com/AAI-Society/spectrum) · [Cite](#cite-schwoebel2026spectrum)
+
+### Internal Consistency Is Not Evidence: Custody, Durability, and the Limits of a Tamper-Evident Log <sub>open source</sub>
+
+ephemeris: an append-only evidence log, hash-chained and Merkle-anchored, with the storage, verification-scalability and custody limits of logging high-frequency multi-agent execution graphs over long horizons stated honestly.
+
+<sub>Jim Schwoebel<sup>1,15</sup> · *Advanced AI Society, Proof-of-Control Initiative — working draft v0.1, 2026*</sub>
+
+[📄 Paper](https://github.com/AAI-Society/ephemeris/blob/main/paper/main.pdf) · [PDF](https://github.com/AAI-Society/ephemeris/raw/main/paper/main.pdf) · [💻 `ephemeris`](https://github.com/AAI-Society/ephemeris) · [Cite](#cite-schwoebel2026ephemeris)
+
+---
+
+## 🌍 World models
+
+**Domain 03 · How do you train agents in simulators that stay exact?** For robotics, operations and simulation teams.
+
+*Verified code world models: simulators an agent can author in minutes, that stay exact, and that teach models to generalize.*
+
+```mermaid
+flowchart LR
+    A["<b>Author</b><br/>an agent writes a world<br/>as code (minutes)"] --> V["<b>Verify</b><br/>tests pass ⇒ exact,<br/>no compounding error"] --> S["<b>Serve</b><br/>Gymnasium adapter,<br/>portable spec + model card"]
+    S --> R["<b>Roll out</b><br/>trajectories from<br/>many verified worlds"] --> F["<b>World-time compute</b><br/>fine-tune on them"] --> G["<b>Generalize</b><br/>to held-out worlds,<br/>incl. human-authored domains"]
+    S --> ARC["<b>ARC-AGI-3</b><br/>perceptual code world models<br/>built by acting"]
+    classDef s fill:#ecfeff,stroke:#0ea5e9,color:#0c4a6e;
+    classDef r fill:#eef2ff,stroke:#6366f1,color:#1e1b4b;
+    class A,V,S s; class R,F,G,ARC r;
+```
+
+<p align="center"><a href="https://github.com/quome-cloud/openworld"><img src="https://raw.githubusercontent.com/quome-cloud/openworld/main/assets/why-verified.png" width="860" alt="Verified code world models stay exact while learned simulators drift"></a><br/><sub>From the OpenWorld papers: verified code stays exact (accuracy 1.0) where learned simulators compound error. <a href="https://github.com/quome-cloud/openworld">openworld</a> is the open-source substrate.</sub></p>
+
+
+### World-Time Compute with Verified Code World Models
+
+Verified code world models have no compounding error, and fine-tuning on trajectories from many verified worlds lifts generalization to held-out worlds, including a real human-authored domain.
+
+<sub>James Schwoebel<sup>1</sup>, Ingrida Semenec<sup>1</sup>, Jenia Rousseva<sup>1</sup>, Marcos Ortiz<sup>1</sup>, Collin Overbay<sup>1</sup>, Christopher Klaus<sup>2</sup>, Anderson Edmond<sup>3</sup>, Manish Bhatt<sup>4,5</sup>, Rome Thorstenson<sup>6</sup>, Jessica Tsai<sup>1</sup>, Martin G. Frasch<sup>7,8</sup> · *arXiv preprint arXiv:2609.09163, 2026*</sub>
+
+[📄 Paper](https://arxiv.org/abs/2609.09163) · [PDF](https://arxiv.org/pdf/2609.09163) · [💻 `openworld`](https://github.com/quome-cloud/openworld) · [Cite](#cite-schwoebel2026worldtime)
+
+### World Computing: Prototyping and Evaluating Verified Code World Models
+
+The OpenWorld substrate: an agent authors a structurally-validated, servable world in minutes; a formal composition algebra, portable specs and model cards, and a six-sector benchmark run on local 7B–9B models with no training.
+
+<sub>James Schwoebel<sup>1</sup>, Ingrida Semenec<sup>1</sup>, Jenia Rousseva<sup>1</sup>, Marcos Ortiz<sup>1</sup>, Collin Overbay<sup>1</sup>, Christopher Klaus<sup>2</sup>, Anderson Edmond<sup>3</sup>, Manish Bhatt<sup>4,5</sup>, Rome Thorstenson<sup>6</sup>, Jessica Tsai<sup>1</sup>, Martin G. Frasch<sup>7,8</sup> · *Preprint, 2026*</sub>
+
+[📄 Paper](https://github.com/quome-cloud/openworld/blob/main/papers/framework/main.pdf) · [PDF](https://github.com/quome-cloud/openworld/raw/main/papers/framework/main.pdf) · [💻 `openworld`](https://github.com/quome-cloud/openworld) · [Cite](#cite-schwoebel2026worldcomputing)
+
+### Solving ARC-AGI-3 with Perceptual Code World Models
+
+Verified code world models built by acting, a source-free audited protocol, the goal-as-procedure diagnosis, and an atlas of serveable per-game world models for ARC-AGI-3.
+
+<sub>James Schwoebel<sup>1</sup>, Ingrida Semenec<sup>1</sup>, Jenia Rousseva<sup>1</sup>, Marcos Ortiz<sup>1</sup>, Collin Overbay<sup>1</sup>, Christopher Klaus<sup>2</sup>, Manish Bhatt<sup>4,5</sup>, Rome Thorstenson<sup>6</sup>, Jessica Tsai<sup>1</sup>, Martin G. Frasch<sup>7,8</sup> · *Technical report, 2026*</sub>
+
+[📄 Paper](https://github.com/quome-cloud/openworld/blob/main/papers/arc-3/main.pdf) · [PDF](https://github.com/quome-cloud/openworld/raw/main/papers/arc-3/main.pdf) · [💻 `openworld`](https://github.com/quome-cloud/openworld) · [Cite](#cite-schwoebel2026arcagi3)
+
 ---
 
 ## 🤖 Agentic systems & evaluation
+
+**Domain 04 · What does agentic software actually deliver to the people who use it?** For product, platform and developer-tools teams.
 
 *Measuring what agentic software actually delivers to the people who use it.*
 
@@ -233,34 +291,6 @@ The Proof-of-Control Standard: 127 verifiable requirements across six domains, g
 <sub>Marcos Ortiz<sup>1</sup>, Justin Hill<sup>1</sup>, Collin Overbay<sup>1</sup>, Ingrida Semenec<sup>1</sup>, Frederic Sauve-Hoover<sup>1</sup>, Jim Schwoebel<sup>1</sup>, Joel Shor<sup>14,1</sup> · *arXiv preprint arXiv:2512.18080, 2025*</sub>
 
 [📄 Paper](https://arxiv.org/abs/2512.18080) · [PDF](https://arxiv.org/pdf/2512.18080) · [Cite](#cite-ortiz2025prompttoproduct)
-
----
-
-## 📅 Release calendar
-
-The fourteen healthcare-security modules go public one at a time, each with its preprint, repository, and dataset on the same day.
-
-```mermaid
-gantt
-    title Module release calendar (repo + dataset flip public; preprint on medRxiv)
-    dateFormat YYYY-MM-DD
-    axisFormat %b %d
-    section Healthcare AI security
-    quanchor :2026-10-05, 1d
-    quledger :2026-10-07, 1d
-    qubom :2026-10-09, 1d
-    quwarden :2026-10-12, 1d
-    qudam :2026-10-14, 1d
-    quantidote :2026-10-16, 1d
-    quorum :2026-10-19, 1d
-    qutriage :2026-10-21, 1d
-    qufair :2026-10-23, 1d
-    qudrift :2026-10-26, 1d
-    qupassport :2026-10-28, 1d
-    quconsent :2026-10-30, 1d
-    qubroker :2026-11-02, 1d
-    qusiege :2026-11-04, 1d
-```
 
 ---
 
@@ -527,7 +557,7 @@ All entries are in [`CITATIONS.bib`](CITATIONS.bib) and machine-readable in [`pa
 
 </details>
 
-<details><summary><b>Proof of control & verification</b> (2)</summary>
+<details><summary><b>Proof of control & verification</b> (8)</summary>
 
 <a id="cite-schwoebel2026parallax"></a>
 **A Trust Calculus for Attestation Tiers: Computing Residual Trust and Testing Whether Deployments Can Be Ranked**
@@ -555,6 +585,84 @@ All entries are in [`CITATIONS.bib`](CITATIONS.bib) and machine-readable in [`pa
 }
 ```
 
+<a id="cite-schwoebel2026pocroadmap"></a>
+**Proof-of-Control Research Roadmap: Twelve Open Questions in Agent Verification**
+
+```bibtex
+@unpublished{schwoebel2026pocroadmap,
+  author = {Schwoebel, Jim},
+  title  = {Proof-of-Control Research Roadmap: Twelve Open Questions in Agent Verification},
+  year   = {2026},
+  note   = {Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \url{https://github.com/AAI-Society/poc-research-roadmap}},
+  month  = {August}
+}
+```
+
+<a id="cite-schwoebel2026pocguide"></a>
+**Proof-of-Control for AI Agents: A Practitioner's Guide**
+
+```bibtex
+@unpublished{schwoebel2026pocguide,
+  author = {Schwoebel, Jim},
+  title  = {Proof-of-Control for AI Agents: A Practitioner's Guide},
+  year   = {2026},
+  note   = {Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \url{https://github.com/AAI-Society/poc_guide}},
+  month  = {August}
+}
+```
+
+<a id="cite-schwoebel2026transit"></a>
+**From Message Authorization to Effect Binding: Conditions, Counterexamples, and a Conformance Harness**
+
+```bibtex
+@unpublished{schwoebel2026transit,
+  author = {Schwoebel, Jim},
+  title  = {From Message Authorization to Effect Binding: Conditions, Counterexamples, and a Conformance Harness},
+  year   = {2026},
+  note   = {Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \url{https://github.com/AAI-Society/transit}},
+  month  = {August}
+}
+```
+
+<a id="cite-schwoebel2026occultation"></a>
+**What Unlinkability Costs at Agent Action Rates: A Composed-Path Measurement and the Soundness of Pre-Computation**
+
+```bibtex
+@unpublished{schwoebel2026occultation,
+  author = {Schwoebel, Jim},
+  title  = {What Unlinkability Costs at Agent Action Rates: A Composed-Path Measurement and the Soundness of Pre-Computation},
+  year   = {2026},
+  note   = {Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \url{https://github.com/AAI-Society/occultation}},
+  month  = {August}
+}
+```
+
+<a id="cite-schwoebel2026spectrum"></a>
+**A Digest Is a Change Detector, Not a Claim: Composition Commitments for Agent Systems, and the Attack Class They Cannot See**
+
+```bibtex
+@unpublished{schwoebel2026spectrum,
+  author = {Schwoebel, Jim},
+  title  = {A Digest Is a Change Detector, Not a Claim: Composition Commitments for Agent Systems, and the Attack Class They Cannot See},
+  year   = {2026},
+  note   = {Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \url{https://github.com/AAI-Society/spectrum}},
+  month  = {August}
+}
+```
+
+<a id="cite-schwoebel2026ephemeris"></a>
+**Internal Consistency Is Not Evidence: Custody, Durability, and the Limits of a Tamper-Evident Log**
+
+```bibtex
+@unpublished{schwoebel2026ephemeris,
+  author = {Schwoebel, Jim},
+  title  = {Internal Consistency Is Not Evidence: Custody, Durability, and the Limits of a Tamper-Evident Log},
+  year   = {2026},
+  note   = {Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \url{https://github.com/AAI-Society/ephemeris}},
+  month  = {August}
+}
+```
+
 </details>
 
 <details><summary><b>Agentic systems & evaluation</b> (1)</summary>
@@ -577,10 +685,22 @@ All entries are in [`CITATIONS.bib`](CITATIONS.bib) and machine-readable in [`pa
 </details>
 
 
-## Work with us
+## 🤝 Partner with us
 
-- **Reproduce something.** Each repository's README has a quickstart and an experiment table; open an issue there if a number doesn't regenerate.
-- **Join the program.** The [Task Force for AI Agents in Healthcare](https://aihealthagents.org/) and the [Advanced AI Society](https://advancedaisociety.org/) both run open working groups.
-- **Talk to us.** [jim@quome.com](mailto:jim@quome.com) · [quome.com](https://quome.com)
+**Bring us the problem. We publish the evidence.** Partners define the question with their clinicians, security engineers and compliance teams; we build the testbed, red-team it, and publish the result together, in the open.
 
-<div align="center"><sub>Apache License 2.0 · © 2026 Quome, Inc. · This page is generated from <code>papers.json</code>; last updated 2026-10-02.</sub></div>
+| Step | What happens |
+|---|---|
+| **1 · Scope the question** | A concrete failure mode in your deployment becomes a research question with a measurable outcome. |
+| **2 · Build the testbed** | An open-source harness on local models and synthetic data. No PHI or proprietary data leaves your network. |
+| **3 · Red-team it** | An adversarial dataset with a full data card, so the defense is measured against attacks, not assumptions. |
+| **4 · Publish together** | Preprint, repository and dataset go public on the same day, with your team as co-authors. |
+
+- **Open by default.** Code is Apache 2.0 and datasets are on Hugging Face, so partners and their regulators can audit every number.
+- **Standards, not just papers.** Findings feed HAARF and the Proof-of-Control Standard through the open working groups of the [Task Force for AI Agents in Healthcare](https://aihealthagents.org/) and the [Advanced AI Society](https://advancedaisociety.org/).
+- **Reproducible on your hardware.** Every experiment reruns on local 7B to 120B models with no paid API keys.
+- **Reproduce something first.** Each repository's README has a quickstart and an experiment table; open an issue there if a number doesn't regenerate.
+
+**Start a conversation:** [jim@quome.com](mailto:jim@quome.com?subject=Research%20partnership) · [quome.com](https://quome.com) · [🌐 quome-cloud.github.io/research](https://quome-cloud.github.io/research/)
+
+<div align="center"><sub>Apache License 2.0 · © 2026 Quome, Inc. · The website is generated from <code>papers.json</code> by <code>build.py</code>; last updated 2026-10-21.</sub></div>

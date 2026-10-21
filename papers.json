@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-02",
+  "generated": "2026-10-21",
   "stats": {
-    "papers": 22,
-    "repos": 18,
+    "papers": 28,
+    "repos": 24,
     "datasets": 14,
     "authors": 21,
     "institutions": 16
@@ -868,38 +868,6 @@
       "title": "Proof of control & verification",
       "papers": [
         {
-          "key": "schwoebel2026parallax",
-          "title": "A Trust Calculus for Attestation Tiers: Computing Residual Trust and Testing Whether Deployments Can Be Ranked",
-          "authors": [
-            "Jim Schwoebel"
-          ],
-          "author_affils": {
-            "Jim Schwoebel": [
-              "quome",
-              "aais"
-            ]
-          },
-          "impact": "parallax: describe a deployment and it computes the residual trust set, every party whose dishonesty would change the answer, what each could do, and how long you would not know. Attestation moves trust; it does not remove it.",
-          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
-          "year": 2026,
-          "paper_url": "https://github.com/AAI-Society/parallax/blob/main/paper/main.pdf",
-          "pdf_url": "https://github.com/AAI-Society/parallax/raw/main/paper/main.pdf",
-          "code_url": "https://github.com/AAI-Society/parallax",
-          "code_label": "parallax",
-          "badge": "open source",
-          "bibtex_type": "unpublished",
-          "extra": {
-            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/parallax}",
-            "month": "August"
-          },
-          "author_affiliations": {
-            "Jim Schwoebel": [
-              "quome",
-              "aais"
-            ]
-          }
-        },
-        {
           "key": "wang2026proofofcontrol",
           "title": "Proof-of-Control: An Open Standard for Runtime Verifiability and Cryptographic Oversight in Autonomous AI Execution",
           "authors": [
@@ -938,6 +906,230 @@
               "aais",
               "quome"
             ]
+          }
+        },
+        {
+          "key": "schwoebel2026pocroadmap",
+          "title": "Proof-of-Control Research Roadmap: Twelve Open Questions in Agent Verification",
+          "authors": [
+            "Jim Schwoebel"
+          ],
+          "author_affiliations": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "author_affils": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "impact": "The foundational strategy paper: twelve scoped research questions, from zero-knowledge identity and state explosion to hardware dependencies and real-time execution boundaries, that the standard currently answers by assertion or not at all. Three are drafted with working software.",
+          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
+          "year": 2026,
+          "paper_url": "https://github.com/AAI-Society/poc-research-roadmap/blob/master/Proof-of-Control-Research-Roadmap.pdf",
+          "pdf_url": "https://github.com/AAI-Society/poc-research-roadmap/raw/master/Proof-of-Control-Research-Roadmap.pdf",
+          "code_url": "https://github.com/AAI-Society/poc-research-roadmap",
+          "code_label": "poc-research-roadmap",
+          "badge": "roadmap",
+          "bibtex_type": "unpublished",
+          "extra": {
+            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/poc-research-roadmap}",
+            "month": "August"
+          }
+        },
+        {
+          "key": "schwoebel2026pocguide",
+          "title": "Proof-of-Control for AI Agents: A Practitioner's Guide",
+          "authors": [
+            "Jim Schwoebel"
+          ],
+          "author_affiliations": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "author_affils": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "impact": "An operational blueprint for CISOs, security engineers and governance teams: deployment architecture, acceptance criteria for third-party AI vendors, twelve vendor questions, eight audit tests, and measured costs from a real Intel TDX deployment.",
+          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
+          "year": 2026,
+          "paper_url": "https://github.com/AAI-Society/poc_guide/blob/master/dist/proof-of-control-guide.pdf",
+          "pdf_url": "https://github.com/AAI-Society/poc_guide/raw/master/dist/proof-of-control-guide.pdf",
+          "code_url": "https://github.com/AAI-Society/poc_guide",
+          "code_label": "poc_guide",
+          "badge": "practitioner guide",
+          "bibtex_type": "unpublished",
+          "extra": {
+            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/poc_guide}",
+            "month": "August"
+          }
+        },
+        {
+          "key": "schwoebel2026parallax",
+          "title": "A Trust Calculus for Attestation Tiers: Computing Residual Trust and Testing Whether Deployments Can Be Ranked",
+          "authors": [
+            "Jim Schwoebel"
+          ],
+          "author_affils": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "impact": "parallax: describe a deployment and it computes the residual trust set, every party whose dishonesty would change the answer, what each could do, and how long you would not know. Attestation moves trust; it does not remove it.",
+          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
+          "year": 2026,
+          "paper_url": "https://github.com/AAI-Society/parallax/blob/main/paper/main.pdf",
+          "pdf_url": "https://github.com/AAI-Society/parallax/raw/main/paper/main.pdf",
+          "code_url": "https://github.com/AAI-Society/parallax",
+          "code_label": "parallax",
+          "badge": "open source",
+          "bibtex_type": "unpublished",
+          "extra": {
+            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/parallax}",
+            "month": "August"
+          },
+          "author_affiliations": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          }
+        },
+        {
+          "key": "schwoebel2026transit",
+          "title": "From Message Authorization to Effect Binding: Conditions, Counterexamples, and a Conformance Harness",
+          "authors": [
+            "Jim Schwoebel"
+          ],
+          "author_affiliations": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "author_affils": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "impact": "transit: a signed capability binds the bytes of a request, not what the endpoint does with them. Conditions under which signing binds the effect, counterexamples where it does not, and a conformance harness for non-deterministic LLM execution.",
+          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
+          "year": 2026,
+          "paper_url": "https://github.com/AAI-Society/transit/blob/main/paper/main.pdf",
+          "pdf_url": "https://github.com/AAI-Society/transit/raw/main/paper/main.pdf",
+          "code_url": "https://github.com/AAI-Society/transit",
+          "code_label": "transit",
+          "badge": "open source",
+          "bibtex_type": "unpublished",
+          "extra": {
+            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/transit}",
+            "month": "August"
+          }
+        },
+        {
+          "key": "schwoebel2026occultation",
+          "title": "What Unlinkability Costs at Agent Action Rates: A Composed-Path Measurement and the Soundness of Pre-Computation",
+          "authors": [
+            "Jim Schwoebel"
+          ],
+          "author_affiliations": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "author_affils": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "impact": "occultation: real BBS+ over BLS12-381 against an Ed25519 baseline, measuring what verifiable unlinkability costs at agent action rates, and what breaks when the pre-computation pool runs out. Agents prove authorization without revealing principal identity.",
+          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
+          "year": 2026,
+          "paper_url": "https://github.com/AAI-Society/occultation/blob/main/paper/main.pdf",
+          "pdf_url": "https://github.com/AAI-Society/occultation/raw/main/paper/main.pdf",
+          "code_url": "https://github.com/AAI-Society/occultation",
+          "code_label": "occultation",
+          "badge": "open source",
+          "bibtex_type": "unpublished",
+          "extra": {
+            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/occultation}",
+            "month": "August"
+          }
+        },
+        {
+          "key": "schwoebel2026spectrum",
+          "title": "A Digest Is a Change Detector, Not a Claim: Composition Commitments for Agent Systems, and the Attack Class They Cannot See",
+          "authors": [
+            "Jim Schwoebel"
+          ],
+          "author_affiliations": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "author_affils": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "impact": "spectrum: a composition commitment for agent systems that commits to a declared component set, model weights and context hashes, and reports which runtime behaviors can be verified cryptographically versus those that need statistical attestation.",
+          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
+          "year": 2026,
+          "paper_url": "https://github.com/AAI-Society/spectrum/blob/main/paper/main.pdf",
+          "pdf_url": "https://github.com/AAI-Society/spectrum/raw/main/paper/main.pdf",
+          "code_url": "https://github.com/AAI-Society/spectrum",
+          "code_label": "spectrum",
+          "badge": "open source",
+          "bibtex_type": "unpublished",
+          "extra": {
+            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/spectrum}",
+            "month": "August"
+          }
+        },
+        {
+          "key": "schwoebel2026ephemeris",
+          "title": "Internal Consistency Is Not Evidence: Custody, Durability, and the Limits of a Tamper-Evident Log",
+          "authors": [
+            "Jim Schwoebel"
+          ],
+          "author_affiliations": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "author_affils": {
+            "Jim Schwoebel": [
+              "quome",
+              "aais"
+            ]
+          },
+          "impact": "ephemeris: an append-only evidence log, hash-chained and Merkle-anchored, with the storage, verification-scalability and custody limits of logging high-frequency multi-agent execution graphs over long horizons stated honestly.",
+          "venue": "Advanced AI Society, Proof-of-Control Initiative — working draft v0.1",
+          "year": 2026,
+          "paper_url": "https://github.com/AAI-Society/ephemeris/blob/main/paper/main.pdf",
+          "pdf_url": "https://github.com/AAI-Society/ephemeris/raw/main/paper/main.pdf",
+          "code_url": "https://github.com/AAI-Society/ephemeris",
+          "code_label": "ephemeris",
+          "badge": "open source",
+          "bibtex_type": "unpublished",
+          "extra": {
+            "note": "Working draft v0.1, Proof-of-Control Initiative, Advanced AI Society. \\url{https://github.com/AAI-Society/ephemeris}",
+            "month": "August"
           }
         }
       ]
