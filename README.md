@@ -6,7 +6,7 @@
 
 ![papers](https://img.shields.io/badge/papers-28-7c3aed) ![open source repos](https://img.shields.io/badge/open--source_repos-24-2563eb) ![datasets](https://img.shields.io/badge/datasets-14-FFD21E) ![authors](https://img.shields.io/badge/co--authors-21-0ea5e9) ![institutions](https://img.shields.io/badge/institutions-16-10b981) ![license](https://img.shields.io/badge/license-Apache_2.0-3FB950)
 
-**[🌐 Website](https://quome-cloud.github.io/research/)** · [Healthcare AI security](#-healthcare-ai-security) · [Proof of control](#-proof-of-control--verification) · [World models](#-world-models) · [Agentic systems](#-agentic-systems--evaluation) · [Partner with us](#-partner-with-us) · [Collaborators](#-collaborators) · [Cite](#-cite)
+**[🌐 Website](https://quome-cloud.github.io/research/)** · **[▶️ Videos](https://www.youtube.com/playlist?list=PLSDh-T0ON0nw)** · [Healthcare AI security](#-healthcare-ai-security) · [Proof of control](#-proof-of-control--verification) · [World models](#-world-models) · [Agentic systems](#-agentic-systems--evaluation) · [Partner with us](#-partner-with-us) · [Collaborators](#-collaborators) · [Cite](#-cite)
 
 </div>
 
@@ -700,6 +700,8 @@ All entries are in [`CITATIONS.bib`](CITATIONS.bib) and machine-readable in [`pa
 - **Standards, not just papers.** Findings feed HAARF and the Proof-of-Control Standard through the open working groups of the [Task Force for AI Agents in Healthcare](https://aihealthagents.org/) and the [Advanced AI Society](https://advancedaisociety.org/).
 - **Reproducible on your hardware.** Every experiment reruns on local 7B to 120B models with no paid API keys.
 - **Reproduce something first.** Each repository's README has a quickstart and an experiment table; open an issue there if a number doesn't regenerate.
+
+**Watch:** [the Research papers playlist on YouTube](https://www.youtube.com/playlist?list=PLSDh-T0ON0nw), thirteen walkthroughs, one paper at a time.
 
 **Start a conversation:** [jim@quome.com](mailto:jim@quome.com?subject=Research%20partnership) · [quome.com](https://quome.com) · [🌐 quome-cloud.github.io/research](https://quome-cloud.github.io/research/)
 

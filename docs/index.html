@@ -162,6 +162,14 @@ section.block{padding-block:clamp(64px,8vw,112px)}
 .pill:hover{border-color:var(--line-2)} .pill.hf{background:#ffe9a8;color:#3a2a00}
 .modtile{width:40px;height:36px;border-radius:12px;flex:none}
 .grid>*,.domains>*,.partners>*{min-width:0;overflow-wrap:anywhere}
+/* videos */
+.video-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center}
+.video-wrap>*{min-width:0}
+.player{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:var(--shadow)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-wrap .cta{margin-top:26px}
+.video-wrap .note{font-family:var(--display);font-size:13px;color:var(--fg-3);margin-top:14px}
+@media (max-width:960px){.video-wrap{grid-template-columns:1fr}}
 /* collaborators */
 .partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
 .partner{padding:28px;border-radius:var(--radius);background:var(--bg-2);border:1px solid var(--line);display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
@@ -184,7 +192,7 @@ footer .fbrand{display:inline-flex;align-items:center;gap:8px} footer .fbrand sv
 
 <nav class="nav"><div class="wrap">
   <a class="brand" href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360.84" fill="#8c7ff2"><path d="M39.789 106.742 C 39.242 106.961,37.489 110.361,35.392 115.269 C 30.157 127.523,26.405 141.203,24.382 155.415 C 22.738 166.962,22.741 184.992,24.388 196.209 C 26.507 210.638,29.356 221.445,34.285 233.755 C 54.755 284.874,101.994 321.718,156.679 329.215 C 166.224 330.524,164.622 330.505,269.675 330.505 L 372.383 330.505 372.264 327.076 C 371.190 295.941,347.945 268.446,316.968 261.670 C 309.916 260.128,312.499 260.185,237.906 259.937 C 188.077 259.771,166.484 259.583,165.343 259.302 C 164.449 259.083,162.662 258.708,161.372 258.470 C 114.940 249.906,84.692 202.391,95.997 155.776 C 100.451 137.410,113.982 117.189,127.858 108.164 C 130.530 106.426,132.384 106.496,84.736 106.527 C 60.270 106.542,40.044 106.639,39.789 106.742"/><path d="M166.245 21.535 C 160.900 21.846,149.066 23.718,142.238 25.332 C 112.220 32.427,84.664 48.546,63.964 71.119 C 58.144 77.465,48.375 90.142,48.375 91.348 C 48.375 91.571,72.014 91.697,113.879 91.697 C 185.723 91.697,185.570 91.693,196.029 93.841 C 209.995 96.710,225.908 105.441,236.611 116.106 C 273.130 152.499,268.913 212.802,227.708 243.435 C 226.963 243.988,226.354 244.595,226.354 244.784 C 226.354 244.998,243.120 245.126,271.128 245.126 L 315.902 245.126 316.220 244.314 C 316.394 243.867,317.223 242.040,318.062 240.253 C 356.824 157.635,313.085 57.834,225.451 28.940 C 218.184 26.543,207.938 24.099,200.181 22.911 C 191.504 21.582,176.137 20.959,166.245 21.535"/></svg>Quome <span>Research</span></a>
-  <ul><li><a href="#domains">Domains</a></li><li><a href="#program">Programs</a></li><li><a href="#publications">Publications</a></li><li><a href="#collaborators">Collaborators</a></li><li><a href="https://github.com/quome-cloud/research" target="_blank" rel="noopener">GitHub ↗</a></li><li><a class="btn primary" href="#partner">Partner with us</a></li></ul>
+  <ul><li><a href="#domains">Domains</a></li><li><a href="#program">Programs</a></li><li><a href="#publications">Publications</a></li><li><a href="#videos">Videos</a></li><li><a href="#collaborators">Collaborators</a></li><li><a href="https://github.com/quome-cloud/research" target="_blank" rel="noopener">GitHub ↗</a></li><li><a class="btn primary" href="#partner">Partner with us</a></li></ul>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
@@ -255,7 +263,20 @@ footer .fbrand{display:inline-flex;align-items:center;gap:8px} footer .fbrand sv
   <div class="grid" id="paper-grid"></div>
 </div></section>
 
-<section class="block" id="collaborators"><div class="wrap">
+<section class="block" id="videos"><div class="wrap">
+  <div class="video-wrap">
+    <div>
+      <div class="eyebrow">Watch</div>
+      <h2 style="font-size:clamp(30px,4vw,50px);font-weight:700;margin-top:12px;max-width:16ch">The papers, explained on video.</h2>
+      <p class="lead" style="margin-top:18px">Thirteen walkthroughs of the research, one paper at a time: the question, the experiment, and the number that settles it. A faster first pass than the PDF.</p>
+      <div class="cta"><a class="btn primary" href="https://www.youtube.com/playlist?list=PLSDh-T0ON0nw" target="_blank" rel="noopener">Open the playlist on YouTube ↗</a></div>
+      <p class="note">Quome Cloud on YouTube · “Research papers” playlist</p>
+    </div>
+    <div class="player"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLSDh-T0ON0nw" title="Quome Research papers playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  </div>
+</div></section>
+
+<section class="block" id="collaborators" style="background:var(--bg-3)"><div class="wrap">
   <div class="sec-head"><div><div class="eyebrow">Collaborators</div><h2>Built in the open, with the people who have to live with the results.</h2></div></div>
   <div class="partners"><a class="partner" href="https://aihealthagents.org/" target="_blank" rel="noopener"><div class="partner-name">Task Force for AI Agents in Healthcare</div><p>Clinicians, security engineers and regulators defining how autonomous agents are verified before they touch patient care. Home of HAARF.</p><span class="link">Visit →</span></a><a class="partner" href="https://advancedaisociety.org/" target="_blank" rel="noopener"><div class="partner-name">Advanced AI Society</div><p>Steward of the Proof-of-Control Initiative: open standards for verifying what AI agents actually did, in a form anyone can check.</p><span class="link">Visit →</span></a></div>
   <div class="insts" id="insts"></div>

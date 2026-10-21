@@ -92,6 +92,8 @@ BLURBS = {
 }
 
 MERMAID = (ROOT / "assets" / "gateway.mmd").read_text()
+PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLSDh-T0ON0nw"
+PLAYLIST_EMBED = "https://www.youtube-nocookie.com/embed/videoseries?list=PLSDh-T0ON0nw"
 MARK = (ROOT / "assets" / "quome-mark.svg").read_text().strip()
 MARK_URI = "data:image/svg+xml;base64," + base64.b64encode(MARK.encode()).decode()
 
@@ -314,6 +316,14 @@ section.block{padding-block:clamp(64px,8vw,112px)}
 .pill:hover{border-color:var(--line-2)} .pill.hf{background:#ffe9a8;color:#3a2a00}
 .modtile{width:40px;height:36px;border-radius:12px;flex:none}
 .grid>*,.domains>*,.partners>*{min-width:0;overflow-wrap:anywhere}
+/* videos */
+.video-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center}
+.video-wrap>*{min-width:0}
+.player{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:var(--shadow)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-wrap .cta{margin-top:26px}
+.video-wrap .note{font-family:var(--display);font-size:13px;color:var(--fg-3);margin-top:14px}
+@media (max-width:960px){.video-wrap{grid-template-columns:1fr}}
 /* collaborators */
 .partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
 .partner{padding:28px;border-radius:var(--radius);background:var(--bg-2);border:1px solid var(--line);display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
@@ -411,7 +421,7 @@ def page():
 
 <nav class="nav"><div class="wrap">
   <a class="brand" href="#top">{MARK}Quome <span>Research</span></a>
-  <ul><li><a href="#domains">Domains</a></li><li><a href="#program">Programs</a></li><li><a href="#publications">Publications</a></li><li><a href="#collaborators">Collaborators</a></li><li><a href="https://github.com/quome-cloud/research" target="_blank" rel="noopener">GitHub ↗</a></li><li><a class="btn primary" href="#partner">Partner with us</a></li></ul>
+  <ul><li><a href="#domains">Domains</a></li><li><a href="#program">Programs</a></li><li><a href="#publications">Publications</a></li><li><a href="#videos">Videos</a></li><li><a href="#collaborators">Collaborators</a></li><li><a href="https://github.com/quome-cloud/research" target="_blank" rel="noopener">GitHub ↗</a></li><li><a class="btn primary" href="#partner">Partner with us</a></li></ul>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
@@ -482,7 +492,20 @@ def page():
   <div class="grid" id="paper-grid"></div>
 </div></section>
 
-<section class="block" id="collaborators"><div class="wrap">
+<section class="block" id="videos"><div class="wrap">
+  <div class="video-wrap">
+    <div>
+      <div class="eyebrow">Watch</div>
+      <h2 style="font-size:clamp(30px,4vw,50px);font-weight:700;margin-top:12px;max-width:16ch">The papers, explained on video.</h2>
+      <p class="lead" style="margin-top:18px">Thirteen walkthroughs of the research, one paper at a time: the question, the experiment, and the number that settles it. A faster first pass than the PDF.</p>
+      <div class="cta"><a class="btn primary" href="{PLAYLIST_URL}" target="_blank" rel="noopener">Open the playlist on YouTube ↗</a></div>
+      <p class="note">Quome Cloud on YouTube · “Research papers” playlist</p>
+    </div>
+    <div class="player"><iframe src="{PLAYLIST_EMBED}" title="Quome Research papers playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  </div>
+</div></section>
+
+<section class="block" id="collaborators" style="background:var(--bg-3)"><div class="wrap">
   <div class="sec-head"><div><div class="eyebrow">Collaborators</div><h2>Built in the open, with the people who have to live with the results.</h2></div></div>
   <div class="partners"><a class="partner" href="https://aihealthagents.org/" target="_blank" rel="noopener"><div class="partner-name">Task Force for AI Agents in Healthcare</div><p>Clinicians, security engineers and regulators defining how autonomous agents are verified before they touch patient care. Home of HAARF.</p><span class="link">Visit →</span></a><a class="partner" href="https://advancedaisociety.org/" target="_blank" rel="noopener"><div class="partner-name">Advanced AI Society</div><p>Steward of the Proof-of-Control Initiative: open standards for verifying what AI agents actually did, in a form anyone can check.</p><span class="link">Visit →</span></a></div>
   <div class="insts" id="insts"></div>
