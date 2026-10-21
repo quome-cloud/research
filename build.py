@@ -314,6 +314,8 @@ section.block{padding-block:clamp(64px,8vw,112px)}
 .card .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
 .pill{font-family:var(--display);font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;background:var(--bg-3);color:var(--fg);border:1px solid transparent;cursor:pointer}
 .pill:hover{border-color:var(--line-2)} .pill.hf{background:#ffe9a8;color:#3a2a00}
+.pill.yt{background:#ff0033;color:#fff} .pill.yt:hover{background:#d60029} .pill.yt[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.cardplayer{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000} .cardplayer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .modtile{width:40px;height:36px;border-radius:12px;flex:none}
 .grid>*,.domains>*,.partners>*{min-width:0;overflow-wrap:anywhere}
 /* videos */
@@ -377,10 +379,12 @@ JS = r"""
     const links = [`<a class="pill" href="${p.paper_url}" target="_blank" rel="noopener">Paper</a>`,
       p.code_url ? `<a class="pill" href="${p.code_url}" target="_blank" rel="noopener">Code · ${esc(p.code_label)}</a>` : '',
       p.dataset_url ? `<a class="pill hf" href="${p.dataset_url}" target="_blank" rel="noopener">🤗 ${esc(p.dataset_label)}</a>` : '',
+      p.video_id ? `<button class="pill yt" data-video="${esc(p.video_id)}" aria-expanded="false">▶ Watch</button>` : '',
       `<button class="pill" data-cite="${esc(p.key)}">Cite</button>`].join('');
+    const player = p.video_id ? `<div class="cardplayer" hidden data-video="${esc(p.video_id)}"></div>` : '';
     return `<article class="card" data-area="${p.area}"><div class="top">${tile}<span class="tag ${a.color}">${esc(a.short)}${p.module?` · ${esc(p.module)}`:''}</span></div>
       <h3>${esc(p.title)}</h3><p class="impact">${esc(p.module ? p.tagline : p.impact)}</p>${head}
-      <div class="authors">${authors(p)}</div><div class="meta">${esc(p.venue)}, ${p.year}${p.haarf?` · HAARF ${esc(p.haarf)}`:''}</div><div class="links">${links}</div></article>`;
+      <div class="authors">${authors(p)}</div><div class="meta">${esc(p.venue)}, ${p.year}${p.haarf?` · HAARF ${esc(p.haarf)}`:''}</div>${player}<div class="links">${links}</div></article>`;
   }
   function render(){
     filters.innerHTML = all.map(a=>`<button class="chip" aria-pressed="${a.id===current}" data-f="${a.id}">${esc(a.title)} (${a.id==='all'?D.papers.length:a.papers})</button>`).join('');
@@ -389,6 +393,14 @@ JS = r"""
   render();
   filters.addEventListener('click', e => { const b=e.target.closest('[data-f]'); if(!b) return; current=b.dataset.f; render(); });
   document.addEventListener('click', e => { const el=e.target.closest('a[data-area]'); if(!el) return; current = el.dataset.area; render(); });
+  // inline video players (iframe created on first click only)
+  grid.addEventListener('click', e => {
+    const b=e.target.closest('[data-video].pill'); if(!b) return;
+    const card=b.closest('.card'), box=card.querySelector('.cardplayer'), open=box.hidden;
+    if(open && !box.firstChild){ const f=document.createElement('iframe'); f.src=`https://www.youtube-nocookie.com/embed/${box.dataset.video}?list=PLSDh-T0ON0nw&autoplay=1`; f.title='Video walkthrough'; f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; f.referrerPolicy='strict-origin-when-cross-origin'; f.allowFullscreen=true; box.appendChild(f); }
+    else if(!open && box.firstChild){ box.innerHTML=''; }
+    box.hidden=!open; b.setAttribute('aria-expanded', String(open)); b.textContent = open ? '■ Close video' : '▶ Watch';
+  });
   // cite modal
   const dlg = document.getElementById('cite'), pre = document.getElementById('cite-pre'), ttl = document.getElementById('cite-title');
   grid.addEventListener('click', e => { const b=e.target.closest('[data-cite]'); if(!b) return; const p=D.papers.find(x=>x.key===b.dataset.cite); ttl.textContent=p.title; pre.textContent=p.bibtex; dlg.showModal(); });
@@ -497,7 +509,7 @@ def page():
     <div>
       <div class="eyebrow">Watch</div>
       <h2 style="font-size:clamp(30px,4vw,50px);font-weight:700;margin-top:12px;max-width:16ch">The papers, explained on video.</h2>
-      <p class="lead" style="margin-top:18px">Thirteen walkthroughs of the research, one paper at a time: the question, the experiment, and the number that settles it. A faster first pass than the PDF.</p>
+      <p class="lead" style="margin-top:18px">Thirteen walkthroughs of the research, one paper at a time: the question, the experiment, and the number that settles it. A faster first pass than the PDF. Each module card under Publications has its own ▶ Watch button.</p>
       <div class="cta"><a class="btn primary" href="{PLAYLIST_URL}" target="_blank" rel="noopener">Open the playlist on YouTube ↗</a></div>
       <p class="note">Quome Cloud on YouTube · “Research papers” playlist</p>
     </div>
