@@ -92,6 +92,8 @@ BLURBS = {
 }
 
 MERMAID = (ROOT / "assets" / "gateway.mmd").read_text()
+MARK = (ROOT / "assets" / "quome-mark.svg").read_text().strip()
+MARK_URI = "data:image/svg+xml;base64," + base64.b64encode(MARK.encode()).decode()
 
 # --------------------------------------------------------------------------- data
 def parse_bib():
@@ -200,7 +202,7 @@ code{font-family:var(--mono);font-size:.9em}
 .nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.4) blur(14px);background:color-mix(in srgb,var(--bg) 84%,transparent);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:17.5px;letter-spacing:-.01em}
-.brand i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:inline-block}
+.brand svg{width:30px;height:27px;display:block;flex:none}
 .brand span{color:var(--fg-3);font-weight:500}
 .nav ul{display:flex;gap:24px;list-style:none;margin:0 0 0 auto;padding:0;font-family:var(--display);font-size:14px;font-weight:600;color:var(--fg-2)}
 .nav li a:hover{color:var(--fg)}
@@ -327,7 +329,8 @@ dialog::backdrop{background:rgba(5,8,25,.55);backdrop-filter:blur(4px)}
 .modal pre{font-family:var(--mono);font-size:12.5px;line-height:1.55;background:var(--bg-3);padding:16px;border-radius:12px;overflow:auto;max-height:50vh;white-space:pre-wrap}
 .modal .row{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
 footer{border-top:1px solid var(--line);padding-block:40px;font-family:var(--display);font-size:13.5px;color:var(--fg-3)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer .fbrand{display:inline-flex;align-items:center;gap:8px} footer .fbrand svg{width:20px;height:18px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 """
 
@@ -401,12 +404,13 @@ def page():
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Quome Research</title>
 <meta name="description" content="Quome Research partners with health systems, standards bodies and regulated enterprises on verifiable AI. Four problem domains, every paper with its code and data.">
+<link rel="icon" type="image/svg+xml" href="{MARK_URI}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>{CSS}</style></head><body>
 
 <nav class="nav"><div class="wrap">
-  <a class="brand" href="#top"><i></i>Quome <span>Research</span></a>
+  <a class="brand" href="#top">{MARK}Quome <span>Research</span></a>
   <ul><li><a href="#domains">Domains</a></li><li><a href="#program">Programs</a></li><li><a href="#publications">Publications</a></li><li><a href="#collaborators">Collaborators</a></li><li><a href="https://github.com/quome-cloud/research" target="_blank" rel="noopener">GitHub ↗</a></li><li><a class="btn primary" href="#partner">Partner with us</a></li></ul>
 </div></nav>
 
@@ -484,7 +488,7 @@ def page():
   <div class="insts" id="insts"></div>
 </div></section>
 
-<footer><div class="wrap"><div>© 2026 Quome, Inc. · Apache License 2.0 · Generated {GENERATED}</div><div><a href="mailto:jim@quome.com">jim@quome.com</a> · <a href="https://quome.com" target="_blank" rel="noopener">quome.com</a> · <a href="https://github.com/quome-cloud/research/blob/main/CITATIONS.bib" target="_blank" rel="noopener">CITATIONS.bib</a></div></div></footer>
+<footer><div class="wrap"><div class="fbrand">{MARK}<span>© 2026 Quome, Inc. · Apache License 2.0 · Generated {GENERATED}</span></div><div><a href="mailto:jim@quome.com">jim@quome.com</a> · <a href="https://quome.com" target="_blank" rel="noopener">quome.com</a> · <a href="https://github.com/quome-cloud/research/blob/main/CITATIONS.bib" target="_blank" rel="noopener">CITATIONS.bib</a></div></div></footer>
 
 <dialog id="cite"><div class="modal"><h3 id="cite-title"></h3><pre id="cite-pre"></pre><div class="row"><button class="btn" id="cite-copy">Copy BibTeX</button><button class="btn" id="cite-close">Close</button></div></div></dialog>
 
